@@ -1,4 +1,4 @@
-package ua.logic.sample;
+package ua.logic.mvc;
 
 public class Controller {
 }

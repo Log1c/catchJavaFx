@@ -1,4 +1,4 @@
-package ua.logic.sample;
+package ua.logic.mvc;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
