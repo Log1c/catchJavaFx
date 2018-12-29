@@ -12,6 +12,8 @@ public class View implements Initializable {
 
     private Main main;
 
+    private ViewModel viewModel;
+
     @FXML
     private TableView<Model> tableView;
 

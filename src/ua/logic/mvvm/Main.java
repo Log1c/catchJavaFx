@@ -4,7 +4,6 @@ import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
@@ -14,13 +13,15 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("view.fxml"));
+
+//        Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
+        primaryStage.setScene(new Scene(loader.load(), 300, 275));
         primaryStage.show();
 
-
-//        controller.setMainApp(this);
+        View controller = loader.getController();
+        controller.setMain(this);
     }
 
     public static void main(String[] args) {
