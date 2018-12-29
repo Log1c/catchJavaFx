@@ -9,9 +9,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 public class View implements Initializable {
-
-    private Main main;
-
     private ViewModel viewModel;
 
     @FXML
@@ -37,10 +34,9 @@ public class View implements Initializable {
         amountColumn.setCellValueFactory(cellData -> cellData.getValue().amountProperty());
     }
 
-    public void setMain(Main main) {
-        this.main = main;
+    public void setViewModel(ViewModel viewModel) {
+        this.viewModel = viewModel;
 
-        tableView.setItems(main.getList());
+        tableView.setItems(viewModel.getList());
     }
-
 }
