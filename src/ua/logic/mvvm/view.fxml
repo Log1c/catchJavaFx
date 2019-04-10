@@ -1,18 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import java.net.URL?>
+<AnchorPane fx:id="root" minHeight="0" prefHeight="413" prefWidth="346"
+            xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="ua.logic.mvvm.View">
+    <padding>
+        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+    </padding>
+    <VBox spacing="5.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane>
+            <Label fx:id="header" contentDisplay="RIGHT"
+                   graphicTextGap="150" prefHeight="80" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.logic.mvvm.View">
-    <children>
-        <TableView fx:id="tableView" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            </Label>
+        </AnchorPane>
+        <AnchorPane>
+            <Button fx:id="dismissNotification"
+                    styleClass="closeButton" text="D"
+                    AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+        </AnchorPane>
+        <TableView fx:id="trackersTableView" cacheShape="false" focusTraversable="false" VBox.vgrow="ALWAYS">
             <columns>
-                <TableColumn fx:id="numberColumn" prefWidth="75.0" text="#" />
-                <TableColumn fx:id="splitColumn" prefWidth="75.0" text="split" />
-                <TableColumn fx:id="typeColumn" prefWidth="75.0" text="type" />
-                <TableColumn fx:id="amountColumn" prefWidth="75.0" text="amount" />
+                <TableColumn fx:id="iconColumn" editable="false" prefWidth="49" resizable="false" sortable="false" />
+                <TableColumn fx:id="nameColumn" editable="false" prefWidth="180" resizable="false" sortable="false" />
+                <TableColumn fx:id="periodColumn" editable="false" prefWidth="100" resizable="false" sortable="false" />
             </columns>
         </TableView>
-    </children>
+    </VBox>
+    <stylesheets>
+        <URL value="@f.css" />
+    </stylesheets>
 </AnchorPane>

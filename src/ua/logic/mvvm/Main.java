@@ -12,7 +12,7 @@ public class Main extends Application {
         loader.setLocation(getClass().getResource("view.fxml"));
 
 //        Parent root = FXMLLoader.load(getClass().getResource("view.fxml"));
-        primaryStage.setScene(new Scene(loader.load(), 300, 275));
+        primaryStage.setScene(new Scene(loader.load()));
         primaryStage.show();
 
         View controller = loader.getController();

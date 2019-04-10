@@ -12,31 +12,26 @@ public class View implements Initializable {
     private ViewModel viewModel;
 
     @FXML
-    private TableView<Model> tableView;
+    private TableView<Model> trackersTableView;
 
     @FXML
-    private TableColumn<Model, String> numberColumn;
+    private TableColumn<Model, String> iconColumn;
 
     @FXML
-    private TableColumn<Model, String> splitColumn;
+    private TableColumn<Model, String> nameColumn;
 
     @FXML
-    private TableColumn<Model, String> typeColumn;
+    private TableColumn<Model, String> periodColumn;
 
-    @FXML
-    private TableColumn<Model, String> amountColumn;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        numberColumn.setCellValueFactory(cellData -> cellData.getValue().numberProperty());
-        splitColumn.setCellValueFactory(cellData -> cellData.getValue().splitProperty());
-        typeColumn.setCellValueFactory(cellData -> cellData.getValue().typeProperty());
-        amountColumn.setCellValueFactory(cellData -> cellData.getValue().amountProperty());
+        iconColumn.setCellValueFactory(cellData -> cellData.getValue().numberProperty());
+        nameColumn.setCellValueFactory(cellData -> cellData.getValue().splitProperty());
+        periodColumn.setCellValueFactory(cellData -> cellData.getValue().typeProperty());
     }
 
     public void setViewModel(ViewModel viewModel) {
-        this.viewModel = viewModel;
-
-        tableView.setItems(viewModel.getList());
+        trackersTableView.setItems(viewModel.getList());
     }
 }
