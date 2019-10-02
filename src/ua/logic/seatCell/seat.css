@@ -1,0 +1,61 @@
+.button,
+.toggle-button {
+    -fx-background-insets: 0;
+    -fx-background-radius: 0;
+    -fx-border-width: 0 0 0 0;
+    -fx-font: 16 'Open Sans';
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(255, 255, 255, 1);
+    -fx-padding: 0 0 0 0;
+}
+
+.label {
+    -fx-font: 12 'Open Sans';
+    -fx-text-fill: rgba(155,155,155,1);
+    -fx-font-weight: bold;
+}
+
+.toggle-button {
+    -fx-background-color: rgba(67, 67, 98, 1);
+    -fx-border-color: rgba(73, 76, 113, 1);
+    -fx-border-width: 0 1 0 0;
+    -fx-border-style: solid inside;
+}
+
+.toggle-button:selected {
+    -fx-background-color: rgba(24, 24, 27, 1);
+    -fx-border-color: rgba(255, 109, 205, 1);
+    -fx-border-width: 1 1 1 1;
+}
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-width: 0 0 0 0;
+}
+
+#leftButton, #rightButton,
+#upButton, #downButton {
+    -fx-background-color: rgba(40, 40, 46, 1);
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: rgba(78, 78, 102, 1);
+}
+
+#littleSharedButton,
+#sharedButton {
+    -fx-background-color: rgba(67, 67, 98, 1);
+    -fx-text-fill: rgba(255, 255, 255, 1);
+}
+
+#littleSharedButton:selected,
+#sharedButton:selected {
+    -fx-background-color: rgba(24, 24, 27, 1);
+}
+
+#littleSharedButton {
+    -fx-font: 8 'Open Sans';
+    -fx-font-weight: bold;
+}
+
+#seatsVBox, #scrollPaneForButtons {
+    -fx-padding: 0 0 0 0;
+}
