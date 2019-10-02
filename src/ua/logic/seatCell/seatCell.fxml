@@ -1,28 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.layout.*?>
-<?import java.net.*?>
-<Group fx:id="root"
-       xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1"
-       fx:controller="ua.logic.seatCell.SeatCellController">
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<Group fx:id="root" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ua.logic.seatCell.SeatCellController">
     <stylesheets>
         <URL value="@seat.css" />
     </stylesheets>
 
-    <HBox prefHeight="40" prefWidth="346" spacing="9">
-        <VBox>
-            <Label text="SEAT"/>
-            <Label fx:id="seatNumber"/>
+    <HBox fx:id="rootContainer" prefHeight="40" prefWidth="346">
+        <VBox alignment="CENTER" maxWidth="36" styleClass="seatText">
+            <Label text="SEAT" />
+            <Label fx:id="seatNumber" />
+            <padding>
+                <Insets right="5" left="5" />
+            </padding>
         </VBox>
-        <VBox HBox.hgrow="ALWAYS">
-            <HBox>
-                <Label fx:id="cardHolderFirstName"/>
-                <Label fx:id="cardHolderLastName"/>
-            </HBox>
-            <Label fx:id="cardDescription"/>
-        </VBox>
-        <Label fx:id="amountLabel" maxHeight="Infinity"/>
+        <HBox fx:id="seatInformation" HBox.hgrow="ALWAYS" maxWidth="Infinity">
+            <VBox fx:id="cardInformation" HBox.hgrow="ALWAYS">
+                <HBox fx:id="cardHolderInformation" spacing="3">
+                    <Label fx:id="cardHolderFirstName" />
+                    <Label fx:id="cardHolderLastName" />
+                </HBox>
+                <Label fx:id="cardDescription" />
+
+            </VBox>
+            <Label fx:id="amountLabel" maxHeight="60" />
+            <padding>
+                <Insets left="5" bottom="3" right="3" top="3" />
+            </padding>
+        </HBox>
+      <padding>
+         <Insets bottom="3" right="3" top="3" />
+      </padding>
     </HBox>
 </Group>

@@ -59,3 +59,32 @@
 #seatsVBox, #scrollPaneForButtons {
     -fx-padding: 0 0 0 0;
 }
+
+#seatInformation {
+    -fx-background-color: BLACK;
+}
+
+#cardHolderFirstName {
+    -fx-text-fill: rgba(28, 179, 167, 1);
+    -fx-font-weight: 100;
+}
+
+#cardHolderLastName {
+    -fx-text-fill: rgba(28, 179, 167, 1);
+}
+
+#cardDescription {
+    -fx-text-fill: rgba(254, 254, 254, .5);
+    -fx-font: 9 'Open Sans';
+    -fx-font-weight: bold;
+}
+
+#rootContainer {
+    -fx-background-color: rgba(255,109,205,1);
+}
+
+.seatText .label{
+    -fx-text-fill: white;
+    -fx-font: 10 'Open Sans';
+    -fx-font-weight: bold;
+}
